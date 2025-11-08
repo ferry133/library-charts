@@ -4,4 +4,4 @@ helm-extra-args: --timeout 600s
 chart-dirs:
 - helper-charts
 chart-repos:
-- ferry133-libraries=https://library-charts.ferry133.com
+- ferry133-libraries=https://library-charts.ferry133.github.io

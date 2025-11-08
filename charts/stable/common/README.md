@@ -30,10 +30,10 @@ Include this chart as a dependency in your `Chart.yaml` e.g.
 dependencies:
 - name: common
   version: 4.5.1
-  repository: https://ferry133.com/charts/
+  repository: https://ferry133.github.io/charts/
 ```
 
-For more information, take a look at the [Docs](http://docs.ferry133.com/our-helm-charts/common-library/).
+For more information, take a look at the [Docs](http://docs.ferry133.github.io/our-helm-charts/common-library/).
 
 ## Configuration
 
@@ -51,7 +51,7 @@ N/A
 |-----|------|---------|-------------|
 | additionalContainers | object | `{}` | Specify any additional containers here as dictionary items. Each additional container should have its own key. Helm templates can be used. |
 | addons | object | See below | The common chart supports several add-ons. These can be configured under this key. |
-| addons.codeserver | object | See values.yaml | The common library supports adding a code-server add-on to access files. It can be configured under this key. For more info, check out [our docs](http://docs.ferry133.com/our-helm-charts/common-library-add-ons/#code-server) |
+| addons.codeserver | object | See values.yaml | The common library supports adding a code-server add-on to access files. It can be configured under this key. For more info, check out [our docs](http://docs.ferry133.github.io/our-helm-charts/common-library-add-ons/#code-server) |
 | addons.codeserver.args | list | `["--auth","none"]` | Set codeserver command line arguments. Consider setting --user-data-dir to a persistent location to preserve code-server setting changes |
 | addons.codeserver.enabled | bool | `false` | Enable running a code-server container in the pod |
 | addons.codeserver.env | object | `{}` | Set any environment variables for code-server here |
@@ -83,7 +83,7 @@ N/A
 | addons.promtail.logs | list | `[]` | The paths to logs on the volume |
 | addons.promtail.loki | string | `""` | The URL to Loki |
 | addons.promtail.volumeMounts | list | `[]` | Specify a list of volumes that get mounted in the promtail container. At least 1 volumeMount is required! |
-| addons.vpn | object | See values.yaml | The common chart supports adding a VPN add-on. It can be configured under this key. For more info, check out [our docs](http://docs.ferry133.com/our-helm-charts/common-library-add-ons/#wireguard-vpn) |
+| addons.vpn | object | See values.yaml | The common chart supports adding a VPN add-on. It can be configured under this key. For more info, check out [our docs](http://docs.ferry133.github.io/our-helm-charts/common-library-add-ons/#wireguard-vpn) |
 | addons.vpn.args | list | `[]` | Override the args for the vpn sidecar container |
 | addons.vpn.configFile | string | `nil` | Provide a customized vpn configuration file to be used by the VPN. |
 | addons.vpn.configFileSecret | string | `nil` | Reference an existing secret that contains the VPN configuration file The chart expects it to be present under the `vpnConfigfile` key. |
@@ -165,7 +165,7 @@ N/A
 | initContainers | object | `{}` | Specify any initContainers here as dictionary items. Each initContainer should have its own key. The dictionary item key will determine the order. Helm templates can be used. |
 | lifecycle | object | `{}` | Configure the lifecycle for the main container |
 | nodeSelector | object | `{}` | Node selection constraint [[ref]](https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/#nodeselector) |
-| persistence | object | See below | Configure persistence for the chart here. Additional items can be added by adding a dictionary key similar to the 'config' key. [[ref]](http://docs.ferry133.com/our-helm-charts/common-library-storage) |
+| persistence | object | See below | Configure persistence for the chart here. Additional items can be added by adding a dictionary key similar to the 'config' key. [[ref]](http://docs.ferry133.github.io/our-helm-charts/common-library-storage) |
 | persistence.config | object | See below | Default persistence for configuration files. |
 | persistence.config.accessMode | string | `"ReadWriteOnce"` | AccessMode for the persistent volume. Make sure to select an access mode that is supported by your storage provider! [[ref]](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#access-modes) |
 | persistence.config.enabled | bool | `false` | Enables or disables the persistence item |
@@ -284,7 +284,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 #### Added
 
-- Support for `nfs` as a persistence type. [[ref](https://docs.ferry133.com/our-helm-charts/common-library-storage/#nfs-volume)].
+- Support for `nfs` as a persistence type. [[ref](https://docs.ferry133.github.io/our-helm-charts/common-library-storage/#nfs-volume)].
 - Support for setting custom `args` for VPN containers.
 - Support setting additional global labels. These will be applied to all objects rendered by the chart.
 - Support setting additional global annotations. These will be applied to all objects rendered by the chart.
@@ -329,7 +329,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Support for specifying configMaps directly in values.yaml.
 - Support for specifying annotations/labels on the VPN add-on `NetworkPolicy`.
 - Support for specifying custom podSelector labels on the VPN add-on `NetworkPolicy`.
-- Added `secret` and `configMap` as persistence types. [[ref]](http://docs.ferry133.com/our-helm-charts/common-library-storage/).
+- Added `secret` and `configMap` as persistence types. [[ref]](http://docs.ferry133.github.io/our-helm-charts/common-library-storage/).
 
 ### [4.0.1]
 
@@ -359,7 +359,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 #### Changed
 
-- Changed the docstring for `persistence` to better reference [our documentation](http://docs.ferry133.com/our-helm-charts/common-library-storage/) regarding Storage options.
+- Changed the docstring for `persistence` to better reference [our documentation](http://docs.ferry133.github.io/our-helm-charts/common-library-storage/) regarding Storage options.
 
 #### Fixed
 
@@ -375,7 +375,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 #### Removed
 
-- Removed persistence examples from the `values.yaml` file. These will be documented instead in [our documentation](http://docs.ferry133.com/our-helm-charts/common-library/).
+- Removed persistence examples from the `values.yaml` file. These will be documented instead in [our documentation](http://docs.ferry133.github.io/our-helm-charts/common-library/).
 
 ### [3.1.1]
 
@@ -563,7 +563,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Support
 
-- See the [Docs](https://docs.ferry133.com/our-helm-charts/getting-started/)
+- See the [Docs](https://docs.ferry133.github.io/our-helm-charts/getting-started/)
 - Open an [issue](https://github.com/ferry133/charts/issues/new/choose)
 - Ask a [question](https://github.com/ferry133/organization/discussions)
 - Join our [Discord](https://discord.gg/sTMX7Vh) community

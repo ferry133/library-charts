@@ -17,7 +17,7 @@ labels:
           for bug reports and feature requests. However, this issue appears
           to be a support request. Please use our support channels
           to get help.
-          - [Docs](https://docs.ferry133.com/)
+          - [Docs](https://docs.ferry133.github.io/)
           - [Discord](https://discord.gg/sTMX7Vh)
           - [GitHub Discussions](https://github.com/ferry133/organization/discussions)
         action: close
