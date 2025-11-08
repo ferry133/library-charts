@@ -5,4 +5,4 @@ chart-dirs:
 - charts/incubator
 - charts/stable
 chart-repos:
-- k8s-at-home-libraries=https://library-charts.k8s-at-home.com
+- ferry133-libraries=https://library-charts.ferry133.com
